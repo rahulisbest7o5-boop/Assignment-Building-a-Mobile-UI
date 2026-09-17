@@ -100,12 +100,15 @@ export default function Index() {
           <Text>Under 30</Text>
           <Ionicons name="chevron-down-outline" size={20} color="black" />
         </View>
-        <View style={styles.description}>
+
+        <View style={styles.descriptionContainer}>
           <Text style={styles.description}>
             Delivery Fees & Service Fees are charged for delivery orders in
-            addition to item prices Learn more
+            addition to item prices.{" "}
+            <Text style={styles.learnMore}>Learn more</Text>
           </Text>
         </View>
+
         <View style={styles.featured}>
           <Text style={styles.sectionText}>Featured on Uber Eats</Text>
         </View>
@@ -244,7 +247,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 8,
   },
+  descriptionContainer: {
+    paddingHorizontal: 16,
+    marginTop: 16,
+  },
 
+  description: {
+    fontSize: 15,
+    lineHeight: 21,
+    color: "#333",
+  },
+
+  learnMore: {
+    fontWeight: "bold",
+    textDecorationLine: "underline",
+  },
   serviceButton: {
     flexDirection: "row",
     alignItems: "center",
@@ -272,11 +289,6 @@ const styles = StyleSheet.create({
     gap: 28,
     paddingHorizontal: 20,
     marginTop: 10,
-  },
-
-  description: {
-    paddingHorizontal: 20,
-    marginTop: 8,
   },
 
   featured: {
@@ -330,28 +342,21 @@ const styles = StyleSheet.create({
     textDecorationLine: "none",
   },
 
-serviceItem: {
-  flexDirection: "row",
-  alignItems: "center",
-  gap: 10,
-  paddingLeft: 10,
-},
+  serviceItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    paddingLeft: 10,
+  },
 
+  serviceText: {
+    fontSize: 18,
+  },
 
-
-serviceText: {
-  fontSize: 18,
-},
-
-categoryItem: {
-  alignItems: "center",
-  justifyContent: "center",
-  marginRight: 20,
-  gap: 6,
-},
-
-
-
-
-
+  categoryItem: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 20,
+    gap: 6,
+  },
 });
