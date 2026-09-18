@@ -359,4 +359,8 @@ const styles = StyleSheet.create({
     marginRight: 20,
     gap: 6,
   },
+  container: {
+    flex: 1,
+    padding: 10,
+  },
 });
